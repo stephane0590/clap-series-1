@@ -5,6 +5,7 @@
  * number = 12 increment(number) retournera 13
  * 
  * Attention, si number n'est pas un nombre on affichera "number doit être un nombre !"
+ * number = "bonjour" retournera "bonjour doit être un nombre !"
  */
 
 function increment(number) {
