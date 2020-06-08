@@ -14,4 +14,4 @@ function isAFlush(cards) {
   // CODE HERE
 }
 
-export { isFlushed };
+export { isAFlush };
