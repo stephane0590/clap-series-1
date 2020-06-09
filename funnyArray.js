@@ -32,7 +32,4 @@ function funnyArray(ary)
   }
   return result;
 }
-
-
-
 export { funnyArray };
