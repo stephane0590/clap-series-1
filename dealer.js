@@ -16,14 +16,15 @@ const TYPES = ["d", "c", "h", "s"]
 
 function dealer() {
 ///////////////////////////////creer un jeu de 52 cartes (tabeau à deux dimentions)////////////////////////////
-  let jeux = new Array(VALUES.length)
-  for (let i = 0; i < VALUES.length; i++) {
-      jeux[i] = new Array(TYPES.length)
-      for (let j = 0; j < TYPES.length; j++){
-        jeux[i][j] = VALUES[i] + TYPES[j];
-      }
+let jeux =[];
+let k = 0;
+  for (let i = 0; i < VALUES.length ; i++){
+    for(let j = 0; j < TYPES.length ; j++){
+    jeux[k] = VALUES[i] + TYPES[j]; 
+    k++;
+    }
   }
-///////////////////////////////////////////////on rempli un tableua deux dimention replresentant 2 main de 5 cartes//////
+///////////////////////////////////////////////on rempli un tableau deux dimentions representant 2 main de 5 cartes//////
 let main = new Array(2);
 main[0] =new Array(5);
 main[1] =new Array(5);
@@ -31,14 +32,13 @@ main[1] =new Array(5);
   for (let l = 0; l < 2; l++) {
     loop2:
     for (let k = 0; k < 5; k++) {
-      indv = Math.floor(Math.random()*13);
-      indt = Math.floor(Math.random()*4);
-      if(main[0].includes(jeux[indv][indt]) || main[1].includes(jeux[indv][indt])){
+      ind = Math.floor(Math.random()*52);
+      if(main[0].includes(jeux[ind]) || main[1].includes(jeux[ind])){
         k -= 1;
         continue loop2;
       }
       else{
-        main[l][k] = jeux[indv][indt];
+        main[l][k] = jeux[ind];
       }
     }
   }

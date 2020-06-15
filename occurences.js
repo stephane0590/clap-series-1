@@ -29,14 +29,18 @@ const CARDS = {
 
 function occurences(cards) 
 {
-  let tableau = cards;
-  let firstchar = [];
-  firstchar.length = tableau.length;
+  let cartval = Object.entries(CARDS);
   let occurrences = { };
-  for (let i = 0; i < tableau.length; i++) 
-  {
-    firstchar[i] = tableau[i].substr(0, 1);  //let firstChar = chaine.substr(0);
-    occurrences[firstchar[i]] = (occurrences[firstchar[i]] || 0) + 1;
+  for (let i = 0; i < cards.length; i++) {
+      for (let j = 0; j < cartval.length; j++){
+        if (cartval[j][1].substr(0, 1) == cards[i].substr(0, 1)){
+          cards[i] = cartval[j][0];
+        }
+        else{
+          continue;
+        }
+      }
+    occurrences[cards[i]] = (occurrences[cards[i]] || 0) + 1;
   }
   return occurrences;
 }

@@ -8,9 +8,7 @@
 
 function inArray(ary, val) 
 { 
-let tableau = ary;
-let element = val;
-let exist = tableau.indexOf(element) > -1;
+let exist = ary.indexOf(val) > -1;
 return exist;
 }
 

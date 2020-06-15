@@ -9,11 +9,33 @@
  * 
  * On considère que la valeur de la carte prime sur le type de la carte
  */
+
+const VALUES = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+const TYPES = ["d", "c", "h", "s"]
+
 function orderCards(cards) 
 {
-  const sortDesc = (a, b) => b - a;
-  let tableau = cards.sort(sortDesc);
-  return tableau;
+  let ordre = [];
+  let rand = [];
+  ////////////////////on rempli un tableau rand dans l'orde de valeur de chaque carte//////////////////
+  let k = 0;
+  for (let i = 0; i < VALUES.length ; i++){
+    for(let j = 0; j < TYPES.length ; j++){
+      rand[k] = VALUES[i] + TYPES[j]; 
+      k++;
+    }
+  }
+  let m = 0;
+    for (let l = 0; l < rand.length; l++){
+      if (cards.includes(rand[l])){
+        ordre[m] = rand[l];            ///on parcours le tableau rand dans l'ordre : des qu'un element de rand est présent dans cards, on le passe dans ordre
+        m++;
+      }
+      else{
+        continue;
+      }
+    }
+  return ordre.reverse(); ////reverse pour afficher du plus fort au plus faible
 }
 
 export { orderCards };

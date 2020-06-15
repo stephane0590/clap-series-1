@@ -7,17 +7,13 @@
  */
 function plusArray(arr1, arr2) 
 {
-  let tableau1 = arr1;
-  let tableau2 = arr2;
   let somme1 = 0;
   let somme2 = 0;
-  for (let i = 0 ; i < tableau1.length; i++)
-  {
-    somme1 = somme1 + tableau1[i];
+  for (let i = 0 ; i < arr1.length; i++){
+    somme1 = somme1 + arr1[i];
   }
-  for (let i = 0 ; i < tableau2.length; i++)
-  {
-    somme2 = somme2 + tableau2[i];
+  for (let i = 0 ; i < arr2.length; i++){
+    somme2 = somme2 + arr2[i];
   }
   let resultat = somme1 + somme2;
   return resultat;

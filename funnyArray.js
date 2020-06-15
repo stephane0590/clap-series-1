@@ -12,8 +12,7 @@
  */
 function funnyArray(ary) 
 {
-  let tableau = ary;
-  let nbelements = tableau.length;
+  let nbelements = ary.length;
   let result;
   if (nbelements == 0)
   {
@@ -23,11 +22,11 @@ function funnyArray(ary)
   {
     if (nbelements%2 == 0)
     {
-      result = tableau[(nbelements/2)-1] + tableau[nbelements/2];
+      result = ary[(nbelements/2)-1] + ary[nbelements/2];
     }
     else
     {
-      result = tableau[(nbelements-1)/2];
+      result = ary[(nbelements-1)/2];
     }
   }
   return result;

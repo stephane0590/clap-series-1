@@ -8,18 +8,13 @@
  * number = "bonjour" retournera "bonjour doit être un nombre !"
  */
 
-function increment(number) 
-{
-  let nombre = number
-    if (typeof nombre == 'number')
-    {
-      nombre = nombre + 1;
-      return nombre
+function increment(number) {
+    if (typeof number == 'number'){
+      number = number + 1;
+      return number
     }
-    else
-    {
-      alert(nombre + 'doit etre un nombre');
+    else{
+      alert(number + ' doit etre un nombre');
     }
 }
-
 export { increment };
