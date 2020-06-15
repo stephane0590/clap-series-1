@@ -12,10 +12,10 @@ const SOLAR_SYSTEM =
 
 function position(planet) 
 {
-  let nomplanet = planet.charAt(0).toUpperCase() + planet.slice(1);
+  let nomplanet = planet.charAt(0).toUpperCase() + planet.slice(1).toLowerCase(); // dans l'éventualité qu'une autre lettre soit en majuscule
   let pos = SOLAR_SYSTEM.indexOf(nomplanet);
   return pos;
 }
-position('Earth');
+
 
 export { position };

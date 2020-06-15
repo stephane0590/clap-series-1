@@ -9,12 +9,12 @@
  */
 
 function increment(number) {
-    if (typeof number == 'number'){
-      number = number + 1;
-      return number
-    }
-    else{
-      alert(number + ' doit etre un nombre');
-    }
+  if (typeof number == 'number'){
+    number = number + 1;
+  }
+  else{
+    number = number.concat(' doit être un nombre !');
+  }
+ return number;
 }
 export { increment };

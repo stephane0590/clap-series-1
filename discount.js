@@ -8,7 +8,7 @@
  */
 
 function discount(price, percent) {
-  let prix = price*(100 - percent)/100 + '€';
+  let prix = price*(100 - percent)/100 + ' €';
   return prix;
 }
 

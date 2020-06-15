@@ -32,7 +32,7 @@ main[1] =new Array(5);
   for (let l = 0; l < 2; l++) {
     loop2:
     for (let k = 0; k < 5; k++) {
-      ind = Math.floor(Math.random()*52);
+      let ind = Math.floor(Math.random()*52);
       if(main[0].includes(jeux[ind]) || main[1].includes(jeux[ind])){
         k -= 1;
         continue loop2;
