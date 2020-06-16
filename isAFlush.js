@@ -10,21 +10,15 @@
  * - Le type de la carte : d => ♦, c => ♣, h => ♥, s => ♠
  */
 
-function isAFlush(cards)
-{
-  let tableau = cards;
+function isAFlush(cards){
   let lastchar = [];
-  lastchar.length = tableau.length;
   let flush = false;
   let occurrences = { };
 
-  for (let i = 0; i < tableau.length; i++) 
-  {
-    lastchar[i] = tableau[i].substr(tableau[i].length - 1);  //let lastChar = chaine.substr(chaine.length - 1); 
+  for (let i = 0; i < cards.length; i++) {
+    lastchar[i] = cards[i].substr(cards[i].length - 1);  //let lastChar = chaine.substr(chaine.length - 1); 
     occurrences[lastchar[i]] = (occurrences[lastchar[i]] || 0) + 1;
-
-    if (occurrences[lastchar[i]] >= 5)
-    {
+    if (occurrences[lastchar[i]] >= 5){
       flush = true;
     }
   }

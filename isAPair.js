@@ -12,20 +12,14 @@
 
 function isAPair(cards) 
 {
-  let tableau = cards;
   let firstchar = [];
-  firstchar.length = tableau.length;
   let pair = false;
   let occurrences = { };
-  for (let i = 0; i < tableau.length; i++) 
+  for (let i = 0; i < cards.length; i++) 
   {
-    firstchar[i] = tableau[i].substr(0, 1);  //let firstChar = chaine.substr(0);
+    firstchar[i] = cards[i].substr(0, 1);  //let firstChar = chaine.substr(0);
     occurrences[firstchar[i]] = (occurrences[firstchar[i]] || 0) + 1;
-    if (occurrences[firstchar[i]] > 2)
-    {
-      pair = false;
-    }
-    else if (occurrences[firstchar[i]] == 2)
+    if (occurrences[firstchar[i]] >= 2)
     {
       pair = true;
     }
